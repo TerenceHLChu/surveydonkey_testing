@@ -1,0 +1,31 @@
+/* Student name: Terence Chu
+   Student number: 301220117 */
+.centerPage {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+form {
+	border-style: solid;
+    border-radius: 30px;
+    border-color: #343A40; 
+    padding: 30px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #343A40;
+    padding: 5px;
+}
+.centerTableItem {
+    text-align: center;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #343A40;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

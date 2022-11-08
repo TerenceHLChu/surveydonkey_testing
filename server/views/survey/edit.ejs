@@ -1,0 +1,86 @@
+<!-- Student name: Terence Chu
+   Student number: 301220117 -->
+
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            
+            <h1><%= title %></h1>
+            
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameTextField">Survey Name</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Name"
+                    value="<%= survey.surveyName %>"
+                    name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="q1TextField">Question 1</label>
+                    <input type="text" class="form-control"
+                    id="q1TestField"
+                    placeholder="Question 1"
+                    name="q1" 
+                    value="<%= survey.q1 %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="q1Opt1TextField">Question 1 - Option 1</label>
+                    <input type="text" class="form-control"
+                    id="q1Opt1TextField"
+                    placeholder="Question 1 - Option 1"
+                    value="<%= survey.q1Opt1 %>"
+                    name="q1Opt1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="q1Opt2TextField">Question 1- Option 2</label>
+                    <input type="text" class="form-control"
+                    id="q1Opt2TextField"
+                    placeholder="Question 1- Option 2"
+                    value="<%= survey.q1Opt2 %>"
+                    name="q1Opt2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="q1Opt3TextField">Question 1 - Option 3</label>
+                    <input type="text" class="form-control"
+                    id="q1Opt3TextField"
+                    placeholder="Question 1 - Option 3"
+                    value="<%= survey.q1Opt3 %>"
+                    name="q1Opt3" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="q1Opt4TextField">Question 1 - Option 4</label>
+                    <input type="text" class="form-control"
+                    id="q1Opt4TextField"
+                    placeholder="Question 1 - Option 4"
+                    value="<%= survey.q1Opt4 %>"
+                    name="q1Opt4" required>
+                </div>
+             
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+
+                <a href="/survey-list/delete/<%= survey.id %>" class="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i> Delete</a>
+
+                <a href="/survey-list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel</a>                        
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ../partials/bottom_nav.ejs %>
+
+<%- include ../partials/footer.ejs %>
